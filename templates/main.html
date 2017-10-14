@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <head>
    <title>Current Status</title>
+   <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+
 </head>
 
 <body>
@@ -9,9 +14,9 @@
    {% for pin in pins %}
    <p>The {{ pins[pin].name }}
    {% if pins[pin].state == true %}
-      is currently on (<a href="/{{pin}}/off">turn off</a>)
+      is currently on (<a class="waves-effect waves-light btn" href="/{{pin}}/off">turn off</a>)
    {% else %}
-      is currently off (<a href="/{{pin}}/on">turn on</a>)
+      is currently off (<a class="waves-effect waves-light btn" href="/{{pin}}/on">turn on</a>)
    {% endif %}
    </p>
    {% endfor %}
